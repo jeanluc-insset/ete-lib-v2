@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    Document   : entity2java.xml
+    Created on : 1 octobre 2010, 18:18
+    Versions   : 1.1 - importations de java.util.Date et java.util.List
+    Author     : jldeleage
+    Description:
+        Modèle de classe à générer pour chaque entité du modèle
+-->
+
+<root xmlns:ete="http://www.jldeleage.com/mda/ns/jld.html"
+      method="text"
+      items="class"
+      xmlns="http://www.jldeleage.com/mda/ns/jld.html"
+      href="€[ translate(package, '.', '/')]/€[ name ].java"
+      >
+
+<!--<ete:import href="operation.xml"/>-->
+// Code généré automatiquement par le template toutesclasses2java.xml
+package €[ package ];
+
+<!--<forEach items="imports" var="i">import €[ i ];
+</forEach>-->
+<for each="i in imports" >import €[ i ];
+</for>
+<!--<for each="association">import €[ ete:package(type, /) ].€[ type ];
+</for>-->
+<for each="association">import €[ package ].€[ type ];
+</for>
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Generated;
+
+@Generated("Ete - auteur : Jean-Luc Deleage jean-luc@insset.fr")
+public class €[ name ] <if test="super-class">
+    <text>extends €[ super-class ]</text>
+</if><text> implements Serializable</text><if test="interface">, <forEach items="interface" var="i" sep="','">€[ i ]</forEach></if> {
+
+
+    //========================================================================//
+    //                           O P E R A T I O N S                          //
+    //========================================================================//
+    //                                                                        //
+    // Ces opérations sont définies dans le modeleur (contrainte "body"), ou  //
+    // bien le modèle ne contient que le résultat (contrainte "result") ou    //
+    // simplement une préassaertion et unr postassertion.                     //
+    // Les opérations qui n'ont aucune spécification et qui ne sont pas       //
+    // abstraites ne sont pas générées.                                       //
+    //                                                                        //
+    //========================================================================//
+
+<!-- TODO : revoir le moteur de templates pour permettre la modularité de
+     ceux-ci -->
+<!--    <ete:apply-templates select="operation" mode="entity"/>-->
+<!-- TODO : générer une opération pour un attribut dérivé et contraint -->
+
+    <ete:for-each
+        select="operation[result | bodyAsJava | body]"><ete:if
+                                                           test="€[ name and type ] ">
+    public €[ ete:type(type) ] €[ name ]() {
+        <ete:choose>
+        <ete:when test="result">return €[ result ];</ete:when>
+        <ete:when test="bodyAsJava">€[ bodyAsJava ]</ete:when>
+        <ete:when test="bodyAs">€[ body ]</ete:when>
+        <ete:otherwise>throw new UnsupportedOperationException("Not supported yet.");</ete:otherwise>
+    </ete:choose>
+    }
+    </ete:if></ete:for-each>
+
+
+    //========================================================================//
+    //              A C C E S S E U R S   E T   M U T A T E U R S             //
+    //========================================================================//
+    //                                                                        //
+    // Les attributs et les associations navigables sont générés.             //
+    // Pour cune association de cardinalité supérieure à 1, les méthodes      //
+    // addXXX et removeXXX sont ajoutées.                                     //
+    //                                                                        //
+    //========================================================================//
+
+
+
+<forEach items="attribute" var="att">
+    <if test="type = 'java.util.Date' or type='date' or type='Date'">@Temporal(javax.persistence.TemporalType.DATE)</if>
+    public €[ ete:type(type) ] get€[ ete:initMaj(name) ]() {
+        return €[name];
+    }
+
+    public void set€[ ete:initMaj(name) ](€[ ete:type(type)] €[name]) {
+        this.€[name] = €[name];
+    }</forEach>
+
+
+
+<for each="association">
+    public <choose><when test="cardinality='*'">List&lt;€[ type ]&gt;</when><otherwise>€[ type ]</otherwise></choose> get€[ ete:initMaj(name) ]() {
+        return €[name];
+    }
+
+    public void set€[ ete:initMaj(name) ](<choose><when test="cardinality='*'">List&lt;€[ type ]&gt;</when><otherwise>€[ type ]</otherwise></choose> €[name]) {
+        this.€[name] = €[name];
+    }<if test="cardinality='*'"><!-- association "n" -->
+
+    public void add€[ ete:initMaj(name) ](€[ type ] €[name]) {
+        this.€[name].add(€[name]);
+    }
+
+    public void remove€[ ete:initMaj(name) ](€[ type ] €[name]) {
+        this.€[name].remove(€[name]);
+    }
+    </if></for>
+
+
+    //========================================================================//
+
+
+<forEach items="association" var="ass">
+    private <choose><when test="cardinality='*'">List&lt;€[ type ]&gt;</when><otherwise>€[ type ]</otherwise></choose> €[ name ];</forEach>
+
+<forEach items="attribute" var="att">
+    private €[ ete:type(type) ] €[ name ];</forEach>
+
+}  // €[ name ]
+
+</root>

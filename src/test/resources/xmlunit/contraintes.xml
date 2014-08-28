@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" 
+        queryBinding="xslt">
+    
+    <pattern id="Entites">
+        <rule context="/">
+            <assert test="count(//Entity) &gt; 0">Il n'y a pas d'entité</assert>
+        </rule>
+    </pattern>
+</schema>

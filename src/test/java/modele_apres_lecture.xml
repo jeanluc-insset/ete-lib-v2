@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<xmi:XMI xmlns:DSL_Customization="http://www.magicdraw.com/schemas/DSL_Customization.xmi"
+         xmlns:MagicDraw_Profile="http://www.omg.org/spec/UML/20131001/MagicDrawProfile"
+         xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile"
+         xmlns:Validation_Profile="http://www.magicdraw.com/schemas/Validation_Profile.xmi"
+         xmlns:ete="http://www.magicdraw.com/schemas/ete.xmi"
+         xmlns:uml="http://www.omg.org/spec/UML/20131001"
+         xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+   <xmi:extension xmlns:MagicDraw_Profile="http://www.omg.org/spec/UML/20110701/MagicDrawProfile"
+                  xmlns:UML_Standard_Profile="http://www.omg.org/spec/UML/20110701/StandardProfileL2"
+                  xmlns:fete="http://www.insset.u-picardie.fr/jeanluc/ete.html"
+                  xmlns:stéréotypes="http://www.magicdraw.com/schemas/stéréotypes.xmi"
+                  xmlns:uml="http://www.omg.org/spec/UML/20110701"
+                  xmlns:uml_2_2="http://www.omg.org/spec/UML/20110701"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20110701"
+                  extender="ete">
+      <model>
+         <Entity>
+            <name>Pilote</name>
+         </Entity>
+         <Entity>
+            <name>Vol</name>
+         </Entity>
+         <Entity>
+            <name>Compte</name>
+         </Entity>
+      </model>
+   </xmi:extension>
+</xmi:XMI>

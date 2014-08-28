@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:StandardProfileL3="http://www.omg.org/spec/UML/20110701/StandardProfileL3" xmlns:DSL_Customization="http://www.magicdraw.com/schemas/DSL_Customization.xmi" xmlns:Validation_Profile="http://www.magicdraw.com/schemas/Validation_Profile.xmi" xmlns:StandardProfileL2="http://www.omg.org/spec/UML/20110701/StandardProfileL2" xmlns:MagicDraw_Profile="http://www.omg.org/spec/UML/20110701/MagicDrawProfile" xmlns:insset="http://www.magicdraw.com/schemas/insset.xmi">
+    <xmi:Documentation>
+        <xmi:exporter>MagicDraw UML</xmi:exporter>
+        <xmi:exporterVersion>17.0.4</xmi:exporterVersion>
+    </xmi:Documentation>
+    <uml:Model xmi:type="uml:Model" xmi:id="eee_1045467100313_135436_1" name="Data">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_4_1243039e_1379317765702_133953_3248" body="Author:jldeleage.&#10;Created:16/09/13 09:49.&#10;Title:.&#10;Comment:.&#10;">
+            <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Model" xmi:id="_17_0_4_1243039e_1379317799486_196180_3252" name="analyse">
+            <packagedElement xmi:type="uml:Package" xmi:id="_17_0_4_1243039e_1379317814464_280151_3253" name="materiel">
+				
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1379317972392_546416_3371" name="ModeleAvion">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_17_0_4_1243039e_1384698308835_838554_3725" general="_17_0_4_1243039e_1384698181976_485565_3661"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318915714_379931_3751" visibility="private" type="_17_0_4_1243039e_1379318896888_374685_3705" association="_17_0_4_1243039e_1379318915713_595006_3749"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1379317977436_465175_3392" name="Appareil">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379317994863_160473_3417" name="modele" visibility="private" type="_17_0_4_1243039e_1384698181976_485565_3661" association="_17_0_4_1243039e_1379317994863_105751_3416">
+						
+						
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318859953_216230_3663" visibility="private" type="_17_0_4_1243039e_1379318144090_724577_3495" association="_17_0_4_1243039e_1379318859952_222749_3661"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1379317994863_105751_3416">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379317994863_160473_3417"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379317994863_989987_3418"/>
+                    <ownedEnd xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379317994863_989987_3418" name="appareils" visibility="private" type="_17_0_4_1243039e_1379317977436_465175_3392" association="_17_0_4_1243039e_1379317994863_105751_3416">
+                        <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1379318019000_974376_3446"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1379318019000_47670_3447" value="*"/>
+                    </ownedEnd>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384698181976_485565_3661" name="Modele"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384698224642_3401_3690" name="ModeleHelico">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_17_0_4_1243039e_1384698305192_678799_3722" general="_17_0_4_1243039e_1384698181976_485565_3661"/>
+                </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_17_0_4_1243039e_1379317829167_951422_3254" name="rh">
+				
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1379317890383_695517_3301" name="Pilote">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379317904363_538259_3321" name="nom" visibility="private">
+                        <type href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String">
+							
+                        </type>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379317915595_974409_3323" name="prenom" visibility="private">
+                        <type href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String">
+							
+                        </type>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379317925567_331714_3325" name="dateNaissance" visibility="private"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318910333_633074_3729" visibility="private" type="_17_0_4_1243039e_1379318896888_374685_3705" association="_17_0_4_1243039e_1379318910333_203918_3728">
+                        <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1379318942052_700423_3773"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1379318942053_495788_3774" value="*"/>
+                    </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1379318896888_374685_3705" name="Brevet">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318910334_555692_3730" visibility="private" type="_17_0_4_1243039e_1379317890383_695517_3301" association="_17_0_4_1243039e_1379318910333_203918_3728"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318915713_55969_3750" visibility="private" type="_17_0_4_1243039e_1379317972392_546416_3371" association="_17_0_4_1243039e_1379318915713_595006_3749">
+						
+						
+                    </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1379318910333_203918_3728">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318910333_633074_3729"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318910334_555692_3730"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1379318915713_595006_3749">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318915713_55969_3750"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318915714_379931_3751"/>
+                </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_17_0_4_1243039e_1379317838290_194908_3255" name="exploitation">
+				
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1379318144090_724577_3495" name="Vol">
+					
+                    <ownedRule xmi:type="uml:Constraint" xmi:id="_17_0_4_1243039e_1379318656406_33280_3656" name="equipage">
+                        <constrainedElement xmi:idref="_17_0_4_1243039e_1379318144090_724577_3495"/>
+                        <specification xmi:type="uml:OpaqueExpression" xmi:id="_17_0_4_1243039e_1379318656407_130547_3657">
+                            <body>         commandant &lt;&gt; copilote</body>
+                            <language>OCL2.0</language>
+                        </specification>
+                    </ownedRule>
+                    <ownedRule xmi:type="uml:Constraint" xmi:id="_17_0_4_1243039e_1379319030218_397344_3779" name="brevetCommandant">
+                        <constrainedElement xmi:idref="_17_0_4_1243039e_1379318144090_724577_3495"/>
+                        <specification xmi:type="uml:OpaqueExpression" xmi:id="_17_0_4_1243039e_1379319030219_76669_3780">
+                            <body>self.commandant.brevets.modele
+                                -&gt;includes(self.avion.modele)</body>
+                            <language>OCL2.0</language>
+                        </specification>
+                    </ownedRule>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318311601_644324_3582" name="commandant" visibility="private" type="_17_0_4_1243039e_1379317890383_695517_3301" association="_17_0_4_1243039e_1379318311601_526592_3581">
+						
+						
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318328850_225000_3609" name="second" visibility="private" type="_17_0_4_1243039e_1379317890383_695517_3301" association="_17_0_4_1243039e_1379318328850_603966_3608">
+						
+						
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318859952_238948_3662" name="avion" visibility="private" type="_17_0_4_1243039e_1379317977436_465175_3392" association="_17_0_4_1243039e_1379318859952_222749_3661"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1384796185907_334729_3429" name="dateDepartPrevue" visibility="private" type="_17_0_4_1243039e_1384797804469_891927_3542"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1379318311601_526592_3581">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318311601_644324_3582"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318311602_471848_3583"/>
+                    <ownedEnd xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318311602_471848_3583" visibility="private" type="_17_0_4_1243039e_1379318144090_724577_3495" association="_17_0_4_1243039e_1379318311601_526592_3581"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1379318328850_603966_3608">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318328850_225000_3609"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318328850_708161_3610"/>
+                    <ownedEnd xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1379318328850_708161_3610" visibility="private" type="_17_0_4_1243039e_1379318144090_724577_3495" association="_17_0_4_1243039e_1379318328850_603966_3608"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1379318859952_222749_3661">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318859952_238948_3662"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1379318859953_216230_3663"/>
+                </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_17_0_4_1243039e_1384703008227_704919_3739" name="dao">
+				
+                <packagedElement xmi:type="uml:Interface" xmi:id="_17_0_4_1243039e_1384703078128_902626_3804" name="DAO">
+                    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_17_0_4_1243039e_1384703264950_546579_3908" visibility="public">
+                        <parameter xmi:idref="_17_0_4_1243039e_1384703264954_602174_3910"/>
+                        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_17_0_4_1243039e_1384703264954_602174_3910" parameteredElement="_17_0_4_1243039e_1384703264953_345949_3909">
+                            <ownedParameteredElement xmi:type="uml:Stereotype" xmi:id="_17_0_4_1243039e_1384703264953_345949_3909" name="Tentity" templateParameter="_17_0_4_1243039e_1384703264954_602174_3910"/>
+                        </ownedParameter>
+                    </ownedTemplateSignature>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_17_0_4_1243039e_1384703093436_812589_3823" name="sauve" visibility="public">
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384703329775_376981_3930" name="entite" visibility="public"/>
+                    </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384703545544_295457_3933" name="DAOMemoire">
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_17_0_4_1243039e_1384703567760_924614_3954" contract="_17_0_4_1243039e_1384703078128_902626_3804">
+                        <client xmi:idref="_17_0_4_1243039e_1384703545544_295457_3933"/>
+                        <supplier xmi:idref="_17_0_4_1243039e_1384703078128_902626_3804"/>
+                    </interfaceRealization>
+                </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_17_0_4_1243039e_1384703905240_931332_3956" name="banque">
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384703929727_269539_3989" name="Compte">
+					
+                    <ownedRule xmi:type="uml:Constraint" xmi:id="_17_0_4_1243039e_1384711812478_765005_4019" name="decouvertInterdit">
+                        <constrainedElement xmi:idref="_17_0_4_1243039e_1384703929727_269539_3989"/>
+                        <specification xmi:type="uml:OpaqueExpression" xmi:id="_17_0_4_1243039e_1384711812479_127831_4020">
+                            <body>solde &gt;= 0</body>
+                            <language>OCL2.0</language>
+                        </specification>
+                    </ownedRule>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1384704000029_392821_4010" name="solde" visibility="private">
+                        <type href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Real">
+							
+                        </type>
+                    </ownedAttribute>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_17_0_4_1243039e_1384704007967_597034_4012" name="crediter" visibility="public">
+						
+                        <ownedRule xmi:type="uml:Constraint" xmi:id="_17_0_4_1243039e_1384704129896_5355_4015" name="post">
+                            <constrainedElement xmi:idref="_17_0_4_1243039e_1384704007967_597034_4012"/>
+                            <specification xmi:type="uml:OpaqueExpression" xmi:id="_17_0_4_1243039e_1384704129897_227685_4016">
+                                <body>         solde = solde@pre + montant</body>
+                                <language>OCL2.0</language>
+                            </specification>
+                        </ownedRule>
+                        <ownedRule xmi:type="uml:Constraint" xmi:id="_17_0_4_1243039e_1384711863677_53712_4021" name="pre">
+                            <constrainedElement xmi:idref="_17_0_4_1243039e_1384704007967_597034_4012"/>
+                            <specification xmi:type="uml:OpaqueExpression" xmi:id="_17_0_4_1243039e_1384711863677_282505_4022">
+                                <body>      montant &gt; 0</body>
+                                <language>OCL2.0</language>
+                            </specification>
+                        </ownedRule>
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384704018441_598101_4014" name="montant" visibility="public">
+                            <type href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Real">
+								
+                            </type>
+                        </ownedParameter>
+                    </ownedOperation>
+                </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_17_0_4_1243039e_1384796212571_19728_3431" name="gestion_commerciale">
+				
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384796287969_835286_3515" name="TypeVol">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1384796343945_651279_3560" name="periodicite" visibility="private" type="_17_0_4_1243039e_1384796333399_951322_3536" association="_17_0_4_1243039e_1384796343945_37678_3559"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384796333399_951322_3536" name="Periodicite" isAbstract="true">
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_17_0_4_1243039e_1384797814974_231520_3547" name="getDatesCompatibles" visibility="public" isAbstract="true">
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384797833381_266078_3549" name="jusqua" visibility="public" type="_17_0_4_1243039e_1384797804469_891927_3542"/>
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384797841121_824099_3550" visibility="public" direction="return" type="_17_0_4_1243039e_1384797804469_891927_3542">
+                            <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1384797965331_575154_3551"/>
+                            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1384797965331_877621_3552" value="*"/>
+                        </ownedParameter>
+                    </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_17_0_4_1243039e_1384796343945_37678_3559">
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1384796343945_651279_3560"/>
+                    <memberEnd xmi:idref="_17_0_4_1243039e_1384796343945_465155_3561"/>
+                    <ownedEnd xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1384796343945_465155_3561" visibility="private" type="_17_0_4_1243039e_1384796287969_835286_3515" association="_17_0_4_1243039e_1384796343945_37678_3559"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384798004302_893675_3563" name="VolFactory">
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_17_0_4_1243039e_1384798020478_614374_3564" name="creeVols" visibility="public">
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384798170201_484261_3861" name="t" visibility="public" type="_17_0_4_1243039e_1384796287969_835286_3515"/>
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384798170213_584869_3862" name="jusqua" visibility="public" type="_17_0_4_1243039e_1384797804469_891927_3542"/>
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_17_0_4_1243039e_1384798170214_684669_3863" visibility="public" direction="return" type="_17_0_4_1243039e_1379318144090_724577_3495">
+                            <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1384798170215_304476_3864"/>
+                            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_4_1243039e_1384798170215_4949_3865" value="*"/>
+                        </ownedParameter>
+                    </ownedOperation>
+                </packagedElement>
+            </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_17_0_4_1243039e_1379318445902_323732_3645" name="insset">
+            <metamodelReference xmi:idref="_17_0_4_1243039e_1379318445903_293758_3646"/>
+            <packageImport xmi:type="uml:PackageImport" xmi:id="_17_0_4_1243039e_1379318445903_293758_3646">
+                <importedPackage href="http://www.omg.org/spec/UML/20110701/UML.xmi#_0">
+					
+                </importedPackage>
+            </packageImport>
+            <packagedElement xmi:type="uml:Class" xmi:id="_17_0_4_1243039e_1384797804469_891927_3542" name="Date"/>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_4_1243039e_1384798291176_945384_3866" name="singleton">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_4_1243039e_1384798291179_503296_3868" name="base_Element" visibility="private" association="_17_0_4_1243039e_1384798291179_31872_3867">
+                    <type href="http://www.omg.org/spec/UML/20110701/UML.xmi#Element">
+						
+                    </type>
+                </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_4_1243039e_1384798291179_31872_3867">
+                <memberEnd xmi:idref="_17_0_4_1243039e_1384798291179_503296_3868"/>
+                <memberEnd xmi:idref="_17_0_4_1243039e_1384798291179_288590_3869"/>
+                <navigableOwnedEnd xmi:idref="_17_0_4_1243039e_1384798291179_288590_3869"/>
+                <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_17_0_4_1243039e_1384798291179_288590_3869" name="extension_sans nom1" visibility="private" aggregation="composite" type="_17_0_4_1243039e_1384798291176_945384_3866" association="_17_0_4_1243039e_1384798291179_31872_3867">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_4_1243039e_1384798291180_584450_3870"/>
+					
+                </ownedEnd>
+            </packagedElement>
+        </packagedElement>
+    </uml:Model>
+	
+    <StandardProfileL2:Entity xmi:id="_17_0_4_1243039e_1379318541990_842241_3655" base_Class="_17_0_4_1243039e_1379317977436_465175_3392"/>
+    <StandardProfileL2:Entity xmi:id="_17_0_4_1243039e_1384703949560_500273_4009" base_Class="_17_0_4_1243039e_1384703929727_269539_3989"/>
+    <StandardProfileL2:Entity xmi:id="_17_0_4_1243039e_1384698117738_617589_3639" base_Class="_17_0_4_1243039e_1379317972392_546416_3371"/>
+    <MagicDraw_Profile:DiagramInfo xmi:id="_17_0_4_1243039e_1379317851167_677388_3268" base_Diagram="_17_0_4_1243039e_1379317850671_493751_3256" Creation_date="16/09/13 09:50" Modification_date="17/11/13 16:57" Author="jldeleage" Last_modified_by="jldeleage"/>
+    <MagicDraw_Profile:DiagramInfo xmi:id="_17_0_4_1243039e_1379318123187_386639_3463" base_Diagram="_17_0_4_1243039e_1379318123181_825517_3452" Creation_date="16/09/13 09:55" Modification_date="18/11/13 18:36" Author="jldeleage" Last_modified_by="jldeleage"/>
+    <StandardProfileL2:Entity xmi:id="_17_0_4_1243039e_1384698263737_271024_3710" base_Class="_17_0_4_1243039e_1384698224642_3401_3690"/>
+    <insset:singleton xmi:id="_17_0_4_1243039e_1384798301252_128143_3872" base_Element="_17_0_4_1243039e_1384798004302_893675_3563"/>
+    <MagicDraw_Profile:DiagramInfo xmi:id="_17_0_4_1243039e_1379317955898_559477_3339" base_Diagram="_17_0_4_1243039e_1379317955893_221395_3328" Creation_date="16/09/13 09:52" Modification_date="17/11/13 15:25" Author="jldeleage" Last_modified_by="jldeleage"/>
+    <MagicDraw_Profile:DiagramInfo xmi:id="_17_0_4_1243039e_1384796225250_167679_3444" base_Diagram="_17_0_4_1243039e_1384796225015_711146_3432" Creation_date="18/11/13 18:37" Modification_date="18/11/13 19:11" Author="jldeleage" Last_modified_by="jldeleage"/>
+    <MagicDraw_Profile:DiagramInfo xmi:id="_17_0_4_1243039e_1384703063540_579811_3783" base_Diagram="_17_0_4_1243039e_1384703063534_587950_3772" Creation_date="17/11/13 16:44" Modification_date="17/11/13 16:57" Author="jldeleage" Last_modified_by="jldeleage"/>
+    <Validation_Profile:definition xmi:id="_17_0_4_1243039e_1384704242009_149283_4017" base_Constraint="_17_0_4_1243039e_1384704129896_5355_4015"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:StandardProfileL3="http://www.omg.org/spec/UML/20110701/StandardProfileL3" xmlns:DSL_Customization="http://www.magicdraw.com/schemas/DSL_Customization.xmi" xmlns:Validation_Profile="http://www.magicdraw.com/schemas/Validation_Profile.xmi" xmlns:StandardProfileL2="http://www.omg.org/spec/UML/20110701/StandardProfileL2" xmlns:MagicDraw_Profile="http://www.omg.org/spec/UML/20110701/MagicDrawProfile" xmlns:insset="http://www.magicdraw.com/schemas/insset.xmi">
+<xmi:Extension extender="ete" xmlns:ete="http://www.magicdraw.com/schemas/ete.xmi" xmlns:uml_2_2="http://www.omg.org/spec/UML/20110701" xmlns:UML_Standard_Profile="http://www.omg.org/spec/UML/20110701/StandardProfileL2" xmlns:stéréotypes="http://www.magicdraw.com/schemas/stéréotypes.xmi">
+<model version="1.0">
+<interface id-ref="_17_0_4_1243039e_1384703078128_902626_3804">
+<name>DAO</name>
+<package>analyse.dao</package>
+<operation id-ref="_17_0_4_1243039e_1384703093436_812589_3823">
+<name>sauve</name>
+<parameter id-ref="_17_0_4_1243039e_1384703329775_376981_3930">
+<name>entite</name>
+<type/>
+<cardinality>1</cardinality>
+</parameter>
+</operation>
+</interface>
+<Entity id-ref="_17_0_4_1243039e_1379317972392_546416_3371">
+<name>ModeleAvion</name>
+<package>analyse.materiel</package>
+<generalization/>
+<association id-ref="_17_0_4_1243039e_1379318915714_379931_3751">
+<name/>
+<type>_17_0_4_1243039e_1379318896888_374685_3705</type>
+<cardinality>1</cardinality>
+</association>
+</Entity>
+<Entity id-ref="_17_0_4_1243039e_1379317977436_465175_3392">
+<name>Appareil</name>
+<package>analyse.materiel</package>
+<association id-ref="_17_0_4_1243039e_1379317994863_160473_3417">
+<name>modele</name>
+<type>_17_0_4_1243039e_1384698181976_485565_3661</type>
+<cardinality>1</cardinality>
+</association>
+<association id-ref="_17_0_4_1243039e_1379318859953_216230_3663">
+<name/>
+<type>_17_0_4_1243039e_1379318144090_724577_3495</type>
+<cardinality>1</cardinality>
+</association>
+</Entity>
+<class id-ref="_17_0_4_1243039e_1384698181976_485565_3661">
+<name>Modele</name>
+<package>analyse.materiel</package>
+</class>
+<Entity id-ref="_17_0_4_1243039e_1384698224642_3401_3690">
+<name>ModeleHelico</name>
+<package>analyse.materiel</package>
+<generalization/>
+</Entity>
+<class id-ref="_17_0_4_1243039e_1379317890383_695517_3301">
+<name>Pilote</name>
+<package>analyse.rh</package>
+<property id-ref="_17_0_4_1243039e_1379317904363_538259_3321">
+<name>nom</name>
+<type>String</type>
+<cardinality>1</cardinality>
+</property>
+<property id-ref="_17_0_4_1243039e_1379317915595_974409_3323">
+<name>prenom</name>
+<type>String</type>
+<cardinality>1</cardinality>
+</property>
+<property id-ref="_17_0_4_1243039e_1379317925567_331714_3325">
+<name>dateNaissance</name>
+<type/>
+<cardinality>1</cardinality>
+</property>
+<association id-ref="_17_0_4_1243039e_1379318910333_633074_3729">
+<name/>
+<type>_17_0_4_1243039e_1379318896888_374685_3705</type>
+<cardinality>*</cardinality>
+</association>
+</class>
+<class id-ref="_17_0_4_1243039e_1379318896888_374685_3705">
+<name>Brevet</name>
+<package>analyse.rh</package>
+<association id-ref="_17_0_4_1243039e_1379318910334_555692_3730">
+<name/>
+<type>_17_0_4_1243039e_1379317890383_695517_3301</type>
+<cardinality>1</cardinality>
+</association>
+<association id-ref="_17_0_4_1243039e_1379318915713_55969_3750">
+<name/>
+<type>_17_0_4_1243039e_1379317972392_546416_3371</type>
+<cardinality>1</cardinality>
+</association>
+</class>
+<class id-ref="_17_0_4_1243039e_1379318144090_724577_3495">
+<name>Vol</name>
+<package>analyse.exploitation</package>
+<association id-ref="_17_0_4_1243039e_1379318311601_644324_3582">
+<name>commandant</name>
+<type>_17_0_4_1243039e_1379317890383_695517_3301</type>
+<cardinality>1</cardinality>
+</association>
+<association id-ref="_17_0_4_1243039e_1379318328850_225000_3609">
+<name>second</name>
+<type>_17_0_4_1243039e_1379317890383_695517_3301</type>
+<cardinality>1</cardinality>
+</association>
+<association id-ref="_17_0_4_1243039e_1379318859952_238948_3662">
+<name>avion</name>
+<type>_17_0_4_1243039e_1379317977436_465175_3392</type>
+<cardinality>1</cardinality>
+</association>
+<property id-ref="_17_0_4_1243039e_1384796185907_334729_3429">
+<name>dateDepartPrevue</name>
+<type>_17_0_4_1243039e_1384797804469_891927_3542</type>
+<cardinality>1</cardinality>
+</property>
+<invariant>
+<name>equipage</name>
+<OCL>         commandant &lt;&gt; copilote</OCL>
+</invariant>
+<invariant>
+<name>brevetCommandant</name>
+<OCL>self.commandant.brevets.modele
+        -&gt;includes(self.avion.modele)</OCL>
+</invariant>
+</class>
+<class id-ref="_17_0_4_1243039e_1384703545544_295457_3933">
+<name>DAOMemoire</name>
+<package>analyse.dao</package>
+</class>
+<Entity id-ref="_17_0_4_1243039e_1384703929727_269539_3989">
+<name>Compte</name>
+<package>analyse.banque</package>
+<property id-ref="_17_0_4_1243039e_1384704000029_392821_4010">
+<name>solde</name>
+<type>Real</type>
+<cardinality>1</cardinality>
+</property>
+<operation id-ref="_17_0_4_1243039e_1384704007967_597034_4012">
+<name>crediter</name>
+<parameter id-ref="_17_0_4_1243039e_1384704018441_598101_4014">
+<name>montant</name>
+<type>Real</type>
+<cardinality>1</cardinality>
+</parameter>
+<post>
+<OCL>         solde = solde@pre + montant</OCL>
+</post>
+<pre>
+<OCL>      montant &gt; 0</OCL>
+</pre>
+</operation>
+<invariant>
+<name>decouvertInterdit</name>
+<OCL>solde &gt;= 0</OCL>
+</invariant>
+</Entity>
+<class id-ref="_17_0_4_1243039e_1384796287969_835286_3515">
+<name>TypeVol</name>
+<package>analyse.gestion_commerciale</package>
+<association id-ref="_17_0_4_1243039e_1384796343945_651279_3560">
+<name>periodicite</name>
+<type>_17_0_4_1243039e_1384796333399_951322_3536</type>
+<cardinality>1</cardinality>
+</association>
+</class>
+<class id-ref="_17_0_4_1243039e_1384796333399_951322_3536">
+<name>Periodicite</name>
+<package>analyse.gestion_commerciale</package>
+<operation id-ref="_17_0_4_1243039e_1384797814974_231520_3547">
+<name>getDatesCompatibles</name>
+<parameter id-ref="_17_0_4_1243039e_1384797833381_266078_3549">
+<name>jusqua</name>
+<type>_17_0_4_1243039e_1384797804469_891927_3542</type>
+<cardinality>1</cardinality>
+</parameter>
+<return id-ref="_17_0_4_1243039e_1384797841121_824099_3550">
+<type>_17_0_4_1243039e_1384797804469_891927_3542</type>
+<cardinality>*</cardinality>
+</return>
+</operation>
+</class>
+<class id-ref="_17_0_4_1243039e_1384798004302_893675_3563">
+<name>VolFactory</name>
+<package>analyse.gestion_commerciale</package>
+<operation id-ref="_17_0_4_1243039e_1384798020478_614374_3564">
+<name>creeVols</name>
+<parameter id-ref="_17_0_4_1243039e_1384798170201_484261_3861">
+<name>t</name>
+<type>_17_0_4_1243039e_1384796287969_835286_3515</type>
+<cardinality>1</cardinality>
+</parameter>
+<parameter id-ref="_17_0_4_1243039e_1384798170213_584869_3862">
+<name>jusqua</name>
+<type>_17_0_4_1243039e_1384797804469_891927_3542</type>
+<cardinality>1</cardinality>
+</parameter>
+<return id-ref="_17_0_4_1243039e_1384798170214_684669_3863">
+<type>_17_0_4_1243039e_1379318144090_724577_3495</type>
+<cardinality>*</cardinality>
+</return>
+</operation>
+</class>
+<class id-ref="_17_0_4_1243039e_1384797804469_891927_3542">
+<name>Date</name>
+<package>insset</package>
+</class>
+</model>
+</xmi:Extension>
+</xmi:XMI>
